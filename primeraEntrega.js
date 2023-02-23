@@ -6,7 +6,6 @@ function usuarioViajante(){
     let nombre = prompt("Ingrese su nombre")
     let edad = prompt("Ingrese su edad")
     let dni = prompt("Ingrese su dni")
-
     let datosUsuarioViajante =("Nombre ingresado: " + nombre + "\n" + "Edad: " + edad + "\n" + "Dni: " + dni)
     alert(datosUsuarioViajante)
     let editarDatos = prompt("Esta conforme con los datos dados?: 1-Si , 2-No")
@@ -32,6 +31,7 @@ function usuarioViajante(){
            
         }
     }
+    return datosUsuarioViajante
 }
 function provincias(){
     let mendoza = alert("Mendoza: Rodeado de montañas y viñedos por un costo de: $40.000")
@@ -65,7 +65,7 @@ function provincias(){
     let opcionesProvincias = parseInt(prompt("Cual de las provincias quiere que sea su destino? Seleccione según número de la provincia elegida: \n 1: Mendoza \n 2: Buenos Aires \n 3: Cordoba \n 4: Santa Cruz"))
     switch (opcionesProvincias){
         case 1:
-            alert("Lo esperamos con ansias en Mendoza! por un total de: $40.000 ")
+            alert("Lo esperamos con ansias en Mendoza! por un total de: $40.000 "+ usuarioViajante[datosUsuarioViajante])
         break;    
         case 2:
             alert("Lo esperamos con ansias Buenos Aires! por un total de: $50.000")
@@ -112,3 +112,5 @@ function provincias(){
 
 usuarioViajante()
 provincias()
+
+ 
